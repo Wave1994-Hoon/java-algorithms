@@ -4,16 +4,16 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class 문자열_뒤집기 {
     public static void main(String[] args) {
-//        assertThat(mySolution("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
-//        assertThat(mySolution("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
-//
-//        assertThat(bestSolution1("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
-//        assertThat(bestSolution1("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
+        assertThat(mySolution("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
+        assertThat(mySolution("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
 
-//        assertThat(bestSolution2("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
-//        assertThat(bestSolution2("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
+        assertThat(bestSolution1("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
+        assertThat(bestSolution1("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
 
-//        assertThat(bestSolution3("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
+        assertThat(bestSolution2("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
+        assertThat(bestSolution2("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
+
+        assertThat(bestSolution3("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
         assertThat(bestSolution3("happy new year".toCharArray())).isEqualTo("raey wen yppah".toCharArray());
     }
 
