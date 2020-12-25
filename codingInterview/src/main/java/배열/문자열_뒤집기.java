@@ -2,6 +2,12 @@ package 배열;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+/*
+* 문제 설명
+* - 문자열 뒤집기
+* - 주어진 문자열을 거꾸로 뒤집은 문자열을 만드는 함수를 작성하라.
+*/
+
 public class 문자열_뒤집기 {
     public static void main(String[] args) {
         assertThat(mySolution("Hello".toCharArray())).isEqualTo("olleH".toCharArray());
