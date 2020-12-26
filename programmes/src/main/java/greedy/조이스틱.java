@@ -26,8 +26,6 @@ public class 조이스틱 {
     public static void main(String[] args) {
         assertThat(solution("JAN")).isEqualTo(23);
         assertThat(solution("JEROEN")).isEqualTo(56);
-//        System.out.println('D' - 'A');
-//        System.out.println('Z' - 'D' + 1);
     }
 
     static public int solution(String name) {
