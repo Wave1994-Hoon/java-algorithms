@@ -26,6 +26,8 @@ public class 조이스틱 {
     public static void main(String[] args) {
         assertThat(solution("JAN")).isEqualTo(23);
         assertThat(solution("JEROEN")).isEqualTo(56);
+//        System.out.println('D' - 'A');
+//        System.out.println('Z' - 'D' + 1);
     }
 
     static public int solution(String name) {
@@ -44,6 +46,7 @@ public class 조이스틱 {
             /*
             * 위아래 이동거리 계산
             * 현재 위치 기준으로 'A' 까지의 거리와 'Z' 까지의 거리를 계산 후 최소 값을 거리로 잡는다.
+            * Z 를 기준으로 <-- 로 이동하는 경우 조이스틱 Down 시켜서 Z로 한번 가야하기 때문에 +1을 해줘야한다.
             */
             totalCount += Math.min(name.charAt(i) - 'A', 'Z' - name.charAt(i) + 1);
 
