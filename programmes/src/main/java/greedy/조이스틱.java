@@ -10,7 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 *
 *  # 문제 조건
 * -----------------
-* | A | A | A | A |
+* | J | A | A | Z |
 * -----------------
 * --> up / down: A to Z 까지 문자 이동
 * --> right/ left: 배열의 인덱스 이동
@@ -53,9 +53,9 @@ public class 조이스틱 {
              * 현재 위치 기준으로 A가 존재하는지 확인한다.
              * next: 현재 위치 + 1 을 가리키며 A 가 존재한다면 +1 씩 증가 시킨다.
              */
-            int indexAfterA = i + 1; // 그 다음 인덱스
-            while(indexAfterA < length && name.charAt(indexAfterA) == 'A')
-                indexAfterA++;
+            int nextIndex = i + 1; // 그 다음 인덱스
+            while(nextIndex < length && name.charAt(nextIndex) == 'A')
+                nextIndex++;
 
             /*
             * 좌우로 최소한으로 갈 수 있는 거리 계산
@@ -63,8 +63,9 @@ public class 조이스틱 {
             * 2 * i: i 만큼 왔던 거리를 다시 i 만큼 되돌아 가야함 -> Right
             * length - next: 마지막 인덱스에서 A가 연속으로 나오는 지점의 다음 인덱스를 계산
             *                2 * i 만큼 되돌아 갔기 때문에 위치는 마지막 인덱스에 있다 따라서 오른쪽(<---) 기준으로 얼만큼 Right 로 이동해야되는지 체크한다.
+            *          
             */
-            minDistance = Math.min(minDistance, 2 * i + length - indexAfterA);
+            minDistance = Math.min(minDistance, 2 * i + length - nextIndex);
         }
         /* 위/아래 + 좌/우(minDistance) */
         totalCount += minDistance;

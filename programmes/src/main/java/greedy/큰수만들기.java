@@ -5,7 +5,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /*
 * 프로그래머스 Greedy 문제 Level 2, 큰 수 만들 문제
 * url = https://programmers.co.kr/learn/courses/30/lessons/42883
-*
+* 참고 = https://eu-ne.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%ED%81%B0-%EC%88%98-%EB%A7%8C%EB%93%A4%EA%B8%B0-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98
 * # 문제 접근
 * 각 자리 수의 최대 값을 구함
 * 조건으로는 K가 있
