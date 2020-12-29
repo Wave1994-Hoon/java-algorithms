@@ -68,9 +68,10 @@ public class 스택뒤집기 {
             return numbers;
         }
         int temp = numbers.pop();
+
         insertAtBottom(numbers, number);
         numbers.push(temp);
-        System.out.println(numbers);
+
         return numbers;
     }
 }
