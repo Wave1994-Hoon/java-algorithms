@@ -29,6 +29,11 @@ public class 스택뒤집기 {
 
     }
 
+    /*
+    * 스택을 사용한 풀이
+    * 시간복잡도: O(n)
+    * 공간복잡도: O(n)
+    */
     private static Stack<Integer> mySolution(Stack<Integer> numbers) {
         Stack<Integer> reversedStack = new Stack<>();
 
@@ -39,6 +44,12 @@ public class 스택뒤집기 {
         return reversedStack;
     }
 
+    /*
+    * 재귀를 이용한 풀이
+    * 위에 풀이 보다 성능은 낮지만, 재귀적으로도 풀 수 있는 사고력이 필요함
+    * 시간 복잡도: O(n^2) -> 중첩된 재귀 함수
+    * 공간 복잡되: O(n)
+    */
     private static Stack<Integer> bestSolution(Stack<Integer> numbers) {
         if (numbers.isEmpty()) {
             return numbers;
