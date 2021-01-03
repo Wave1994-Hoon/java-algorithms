@@ -16,8 +16,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class 괄호_위치_찾기 {
     public static void main(String[] args) {
         assertThat(solution("[{1+2*(2+2)}-(1-3)]", 1)).isEqualTo(11);
+        assertThat(solution("[{1+2*(2+2)}-(1-3)]", 0)).isEqualTo(18);
     }
 
+    /*
+    * 시간 복잡도: O(n)
+    * 공간 복잡도: O(n)
+    */
     private static int solution(String mathExpression, int position) {
         if (mathExpression.length() < position) {
             throw  new IllegalArgumentException("position value is over");
@@ -35,7 +40,7 @@ public class 괄호_위치_찾기 {
 
         Character positionBracket = brackets.get(position);
 
-        if (openingBrackets.contains(positionBracket)) {
+        if (openingBrackets.contains(positionBracket) == false) {
             throw  new IllegalArgumentException("position value is not openingBracket");
         }
 
