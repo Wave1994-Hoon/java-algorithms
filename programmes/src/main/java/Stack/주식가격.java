@@ -4,6 +4,16 @@ import java.util.Stack;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+
+/*
+* 문제
+* 주식 가격, level 2
+* url = https://programmers.co.kr/learn/courses/30/lessons/42584
+*
+* 제한사항
+* prices의 각 가격은 1 이상 10,000 이하인 자연수입니다.
+* prices의 길이는 2 이상 100,000 이하입니다.
+*/
 public class 주식가격 {
     public static void main(String[] args) {
         assertThat(solutionWithBruteForce(new int[] {1, 2, 3, 2, 3})).isEqualTo(new int[] {4, 3, 1, 1, 0});
