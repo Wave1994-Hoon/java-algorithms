@@ -24,5 +24,29 @@ import java.util.List;
 * 공간 복잡도: O(1)
 * */
 class Solution {
-g
+    public boolean hasCycle(ListNode head) {
+        ListNode walker = head;
+        ListNode runner = head;
+
+        while(runner != null) {
+            runner = runner.next;
+            if(runner == null) {
+                break;
+            }
+
+            if(runner != null) {
+                runner = runner.next;
+                walker = walker.next;
+
+                if(runner == walker) {
+                    break;
+                }
+            }
+        }
+
+        if(runner == null) {
+            return false;
+        }
+        return true;
+    }
 }
