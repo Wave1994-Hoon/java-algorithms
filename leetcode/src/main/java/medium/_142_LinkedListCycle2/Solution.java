@@ -1,4 +1,4 @@
-package easy._142_LinkedListCycle2;
+package medium._142_LinkedListCycle2;
 
 /*
 * 접근법
