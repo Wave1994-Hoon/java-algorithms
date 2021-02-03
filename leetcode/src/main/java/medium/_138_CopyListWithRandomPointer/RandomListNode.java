@@ -9,5 +9,6 @@ public class RandomListNode {
         this.value = value;
         this.next = null;
         this.random = null;
+
     }
 }
