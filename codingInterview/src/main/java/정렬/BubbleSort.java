@@ -1,5 +1,6 @@
 package 정렬;
 
+/* 선택된 인덱스와 그 앞 인덱스의 크기를 서로 비교 -> 계속 반복 */
 public class BubbleSort {
     private static void doBubbleSort(int[] array) {
         doBubbleSort(array, array.length -1);
