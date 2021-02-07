@@ -41,7 +41,16 @@ public class MergeSort {
             }
         }
 
-        /* 앞쪽 배열(part1)에 데이터가 남은 경우(middle까지 못간 경우), 남은 데이터를 저장 */
+        /* 앞쪽 배열(part1)에 데이터가 남은 경우(middle까지 못간 경우), 남은 데이터를 저장
+        *
+        * ex) 앞쪽 배열이 남은 경우
+        * 0 5 / 2 3
+        * 0 -> 0 2 -> 0 2 3 -> 앞쪽 배열에 5 남음 -> 0 2 3 5
+        *
+        * ex) 뒤쪽 배열이 남은 경우
+        * 0 3 / 2 5
+        * 0 -> 0 2 -> 0 2 3 -> 앞쪽 배열 끝, 이미 기존 배열에 5 가 있기 때문에 -> 0 2 3 5
+        * */
         for (int i = 0; i <= middle - part1; i++) {
             array[index + i] = tmpArray[part1 + i];
             System.out.println("here");
