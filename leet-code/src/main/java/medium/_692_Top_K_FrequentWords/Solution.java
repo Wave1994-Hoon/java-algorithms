@@ -4,7 +4,7 @@ import java.security.PublicKey;
 import java.util.*;
 
 public class Solution {
-    public class WordCnt {
+    public static class WordCnt {
         String word;
         int cnt;
 
