@@ -1,4 +1,5 @@
 rootProject.name = 'Algorithms'
 include 'programmes'
 include 'codingInterview'
+include 'leetcode'
 
