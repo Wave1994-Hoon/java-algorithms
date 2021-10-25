@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 class Solution {
-
   private List<List<Integer>> result = new ArrayList<>();
 
   public static void main(String[] args) {
@@ -32,15 +31,14 @@ class Solution {
     }
 
     // logic
-    if(result.size() <= level) {
+    if(result.size() == level) {
       List<Integer> levelNodes = new ArrayList<>();
-      result.add(levelNodes);
     }
-
     List<Integer> levelNodes  = result.get(level);
     levelNodes.add(currentNode.val);
+    result.add(levelNodes);
 
-    // recursion
+    // recursion, left -> right
     travel(currentNode.left, level + 1);
     travel(currentNode.right, level + 1);
   }
