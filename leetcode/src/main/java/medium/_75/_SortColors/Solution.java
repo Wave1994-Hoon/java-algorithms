@@ -2,23 +2,24 @@ package medium._75._SortColors;
 
 public class Solution {
   public void sortColors(int[] nums) {
+    int index = 0;
+    int start = 0;
+    int end = nums.length-1;
 
-    int i = 0;
-    int j = nums.length-1;
-    int k = 0;
-
-    while (k <= j) {
-      if (nums[k] == 0) {
-        swap (nums, i++, k++);
+    while (index <= end) {
+      if (nums[index] == 0) {
+        swap (nums, index++, start++);   // 앞에 있는 값을 Swap 했기 때문에 index 를 한 칸 이동한다.
         continue;
       }
 
-      if (nums[k] == 2) {
-        swap (nums, k, j--);
+      if (nums[index] == 2) {
+        swap (nums, index, end--);       // 뒤에 있는 값을 Swap 했기 때문에 한번 더 탐색을 한다.
         continue;
       }
 
-      k++;
+      if (nums[index] == 1) {
+        index++;
+      }
     }
   }
 
