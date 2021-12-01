@@ -23,14 +23,7 @@ public class 위장 {
 
     for (String[] element : clothes) {
       String kind = element[1];
-
-      if (clothesMap.containsKey(kind)) {
-        Integer count = clothesMap.get(kind);
-        clothesMap.put(kind, ++count);
-        continue;
-      }
-
-      clothesMap.put(kind, 2); // element + none
+      clothesMap.put(kind, clothesMap.getOrDefault(kind, 1) + 1);
     }
 
 
