@@ -1,30 +1,34 @@
 package sort;
 
+import test.Solution;
+
 import java.util.Arrays;
 
 public class 가장큰수 {
 
-    public static String solution(int[] numbers) {
-        int length = numbers.length;
-        String[] stringNumbers = new String[length];
+    public static void main(String[] args) {
+        int[] numbers = new int[] {6, 10, 2};
+        Solution solution = new Solution();
+        solution.solution(numbers);
+    }
 
-        for (int i = 0; i < length; i++) {
-            stringNumbers[i] = Integer.toString(numbers[i]);
+    public String solution(int[] numbers) {
+        int N = numbers.length;
+        String[] strNumbers = new String[N];
+        for (int i = 0; i < N; i++) {
+            strNumbers[i] = Integer.toString(numbers[i]);
         }
 
-        Arrays.sort(stringNumbers, (numberA, numberB) -> {
-            if (numberA.length() == numberB.length()) {
-                return numberB.compareTo(numberA);
-            }
-            String ab = numberA + numberB;
-            String ba = numberB + numberA;
+        Arrays.sort(strNumbers, (a, b) -> {
+            String ab = a + b;
+            String ba = b + a;
             return ba.compareTo(ab);
         });
 
-        if ("0".equals(stringNumbers[0])) {
-            return "0";
+        if ("0".equals(strNumbers[0])) {
+            return "0";  // To make this caee ("00000" -> "0")
         }
 
-        return String.join("", stringNumbers);
+        return String.join("", strNumbers);
     }
 }

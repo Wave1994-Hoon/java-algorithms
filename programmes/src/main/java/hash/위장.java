@@ -8,11 +8,13 @@ import java.util.Map;
 
 public class 위장 {
 
+  //https://www.youtube.com/watch?v=gUOhIk-K1-o
+
   public static void main(String[] args) {
     Solution solution = new Solution();
     String[][] clothes = new String[][] {{"yellowhat", "headgear"}, {"bluesunglasses", "eyewear"}, {"green_turban", "headgear"}};
 
-    System.out.println(solution.solution(clothes));
+//    System.out.println(solution.solution(clothes));
   }
 
 
