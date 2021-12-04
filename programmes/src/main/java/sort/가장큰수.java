@@ -5,13 +5,6 @@ import test.Solution;
 import java.util.Arrays;
 
 public class 가장큰수 {
-
-    public static void main(String[] args) {
-        int[] numbers = new int[] {6, 10, 2};
-        Solution solution = new Solution();
-        solution.solution(numbers);
-    }
-
     public String solution(int[] numbers) {
         int N = numbers.length;
         String[] strNumbers = new String[N];
